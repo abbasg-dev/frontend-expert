@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessibility</title>
+    <script src="js/tabs.js" defer></script>
+    <link rel="stylesheet" href="css/tabs.css" />
+  </head>
+  <body>
+    <ol role="tablist">
+      <li id="tab1" role="tab" aria-controls="panel1" aria-selected="true">
+        Tab 1
+      </li>
+      <li id="tab2" role="tab" aria-controls="panel2" aria-selected="false">
+        Tab 2
+      </li>
+      <li id="tab3" role="tab" aria-controls="panel3" aria-selected="false">
+        Tab 3
+      </li>
+    </ol>
+
+    <div role="tabpanel" id="panel1" aria-labelledby="tab1">
+      <p>Panel 1</p>
+    </div>
+
+    <div class="hidden" role="tabpanel" id="panel2" aria-labelledby="tab2">
+      <p>Panel 2</p>
+    </div>
+
+    <div class="hidden" role="tabpanel" id="panel3" aria-labelledby="tab3">
+      <p>Panel 3</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+div {
+  background-color: lightblue;
+  width: 30%;
+  height: 6em;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 4em;
+  animation: move 3s forwards reverse 2 running steps(3);
+  /* animation-name: move;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-iteration-count: 2;
+  animation-play-state: running;
+  animation-timing-function: steps(3); */
+}
+
+@keyframes move {
+  from {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(200px, 0px);
+  }
+
+  to {
+    transform: translate(200px, 300px);
+  }
+}
