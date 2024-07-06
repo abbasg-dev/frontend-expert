@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Connecting JS to HTML</title>
+    <!-- defer: Fetch the script asynchronously without blocking the page. Only execute the script after the DOM has finished being parsed. -->
+    <!-- Async: Fetch the script asynchronously without blocking the page. Whenever the script is ready, stop parsing the DOM and execute the script. This is usually only for scripts that do not need access to the DOM, because otherwise the behavior will be inconsistent based on how quickly the script downloaded. -->
+
+    <!-- <script>
+      console.log("Hello World");
+    </script> -->
+    <!-- <script src="js/script.js" defer></script> -->
+    <script src="js/script.js" async></script>
+  </head>
+  <body>
+    <button>Click Me</button>
+  </body>
+</html>
