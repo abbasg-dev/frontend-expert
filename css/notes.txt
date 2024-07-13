@@ -1,0 +1,356 @@
+
+1. Introduction
+CSS makes up the second pillar of the holy trinity of the modern web. Often unjustly viewed as tedious and frustrating by many developers, it can actually be quite elegant and powerful in the right hands.
+
+Invest the time and effort needed to master CSS, and you'll inevitably stand out among your peers.
+
+2. CSS Basics
+Your journey to CSS mastery begins by mastering the basics. Let's dive in!
+
+CSS
+Cascading Style Sheets is the primary styling language of the web. This language is used to describe the style and layout of HTML documents.
+
+Cascading
+The order that stylesheets are used. These stylesheets can be grouped into three main categories:
+
+User Agent Stylesheets: Contain browser defaults for styles, these get the lowest level of precedence.
+User Stylesheets: Contain user preferences saved in the browser, which override user agent stylesheets.
+Author Stylesheets: Contain the CSS code we write, these get the highest level of precedence (assuming !important has not been used).
+
+Declaration
+A CSS property-value pair in the form property: value;
+
+Declaration Block
+A group of declarations surrounded by {}
+
+Ruleset
+A selector followed by a declaration block for styling elements matching the selector with the declarations in the declaration block.
+
+<link>
+A self-closing HTML tag for linking to external resources, usually CSS stylesheets. When linking to a stylesheet, <link> will take two attributes:
+
+rel: The relationship to the other document. For CSS files, this should be stylesheet.
+href: The path to the linked file, either relative or absolute.
+
+3. Selectors
+CSS offers a selection of selectors for you to select from.
+
+Selector
+A pattern used at the beginning of a ruleset for choosing which elements will be affected by the declarations. There are a variety of different selector types:
+
+Type selector: Selects all of the elements of a specific HTML tag.
+Class selector: Selects all elements with a specific HTML class attribute. Class selectors are prefixed with a
+ID selector: Selects an element with a specific HTML ID attribute. ID selectors are prefixed with a #
+Attribute selector: Selects all elements with a specific HTML attribute set to a specific value. These are surrounded by [] and use a = as a delimiter between the attribute name and value.
+
+Excluding the value will select all elements with the attribute set to any value.
+
+Attribute selectors can also use special syntax for basic pattern matching within the value. There are a variety of options here, but these are some of the more common ones:
+	[href*="algoexpert.io"] would select all elements with an href attribute with the text "algoexpert.io" at any location.
+	[href$="algoexpert.io"] would select all elements with an href attribute with the text "algoexpert.io" at the end of the value.
+	[href^="https://algoexpert.io"] would select all elements with an href attribute with the text "https://algoexpert.io" at the beginning of the value.
+
+Combinator: Combines multiple selectors to select elements based on their location in the DOM. There are a few types of combinators:
+	Descendant combinator: Represented by a single space, in the format selector1 selector2. Selects all elements that match selector2 and are a descendant of an element matching selector1. A descendant does not need to be a direct child (e.g. the selected element's grandparent could match selector1).
+	Child combinator: Represented by >, in the format selector1 > selector2. Selects all elements that match selector2 and are a direct child of an element matching selector1.
+	Sibling combinator: Represented by ~, in the format selector1 ~ selector2. Selects all elements that match selector2 and are a sibling of an element matching selector1. The element matching selector2 must come after the element matching selector1.
+	Adjacent sibling combinator: Represented by +, in the format selector1 + selector2. Selects all elements that match selector2 and have an element matching selector1 directly before them in the DOM.
+
+4. Pseudo Classes And Elements
+Hover over me, I have a pseudo-class.
+
+Pseudo Class
+An addition to a CSS selector for selecting based on the current state of the element. These start with :, 
+
+Pseudo Element
+An addition to a CSS selector for selecting a specific portion of the element. These start with ::
+
+::before and ::after are special pseudo elements that insert children before or after the content of the element, allowing for styling before or after the content. This is oftentimes used with the CSS content property, but not always.
+
+5. Selector Specificity
+
+While humans unfortunately often resort to violence as a means of conflict resolution, CSS instead prefers to take a more mathematical approach to settling disputes.
+
+Specificity
+The algorithm used by the browser to determine which CSS declarations to use when an element is selected by two rulesets with the same property.
+
+Specificity is roughly calculated by counting the number of each selector type involved in a selector and multiplying by a weight. These weights are as follows:
+
+Inline Styles: 1000
+IDs: 100
+Classes: 10
+Pseudo-Classes: 10
+Attributes: 10
+Elements: 1
+Pseudo-Elements: 1
+
+6. CSS Units
+cm, mm, Q, in, pc, pt, px, em, ex, ch, rem, lh, vw, vh, vmin, vmax...
+That's a lot of units! Most of them are kind of useless though.
+
+Absolute Unit
+A unit whose value is not dependent on something else, so its size will be constant regardless of the context. In general, the px unit is the only one of these used on the web.
+
+Relative Unit
+A unit whose value is dependent on something else. These are the most frequently used relative units:
+
+em: Relative to the font size.
+rem: Relative to the root element's font size. By default, this is usually 16px, but it can be overridden by the user stylesheet. Moreover, the author stylesheets can change this by setting a font size on the html selector or the :root pseudo class.
+%: A percentage, usually of the parents value for the same property.
+vw: A percentage of the width of the viewport.
+vh: A percentage of the height of the viewport.
+ch: The number of characters on a line, based on the size of the "0" character in the element's font. This can be useful to prevent paragraphs from spanning more than ~70 characters in width, which can become hard to read.
+
+7. Block vs. Inline
+block
+block
+block
+inline inline inline
+
+That's pretty much it.
+
+Block Element
+An element with its display property set to block. These have a few key properties:
+
+They start on new lines.
+By default they span the entire width of their parent.
+
+Inline Element
+An element with its display property set to inline. These have a few key properties:
+	They start immediately after the content before them, without a new line.
+	They span the width of their content.
+	width and height properties have no effect on them.
+
+Inline-Block Element
+An element with its display property set to inline-block. These have a few key properties:
+	They start immediately after the content before them, without a new line.
+	They span the width of their content by default, but this can be changed.
+
+8. Box Model
+In order to succeed at CSS, you must always be thinking outside inside the box.
+
+Box Model
+A box surrounding all elements on the document used for layout. From inside to out, this consists of the content, padding, border and margin.
+
+padding
+A property used to create extra space within an element, between the content and border. The padding CSS property is a shorthand for padding-top, padding-right, padding-bottom and padding-left in that order.
+
+border
+A property used to create a border around the content and padding of an element. The border CSS property is a shorthand for border-color, border-style and border-width, which it takes as space separated values in any order.
+
+A border-radius can also be used to create rounded corners on an element, regardless of if it has a border. This defines the radius of the corners, and a value of 50% is often used on square elements to create a circle.
+
+Additionally, border-top, border-right, border-bottom and border-left can be used to set borders on a single side of an element.
+
+margin
+A property used to create extra space around an element. The margin CSS property is a shorthand for margin-top, margin-right, margin-bottom and margin-left in that order.
+
+A value of auto can also be used to allow the browser to choose margins, which will usually center block elements horizontally.
+
+Adjacent horizontal margins will be added together to determine the space between elements. Vertical margins on the other hand will usually be collapsed, meaning only the larger margin value will be used.
+
+9. Box Sizing
+What do countries and CSS developers have in common?
+
+They both have to deal with border conflicts.
+
+box-sizing
+A CSS property for specifying how width and height should be calculated for the selected element. The default value is content-box for most elements, which sets the width and height to only control the size of the content. However, a value of border-box would include the size of the padding and border.
+
+10. Position
+Ah, position. 
+
+Also commonly known as "why doesn't this work", "I hate CSS", and "I need a drink".
+
+position
+A CSS property for setting how the browser should position an element in the document. This defaults to static, but can take a variety of values:
+
+static: The default value, the element follows the flow of the document.
+fixed: The element is positioned relative to the viewport and removed from the normal flow of the document. The top, left, right and bottom properties can then be used to move the element.
+relative: The element is positioned in the same place as it would be with static, however, it can be repositioned with top, left, right and bottom relative to its natural position on the document.
+sticky: The element will act similar to a relative positioned element, but once it scrolls off screen it will stay fixed to the screen, essentially acting as position: fixed. This is particularly useful for menu bars that need to "stick" to the top of the screen as the user scrolls.
+absolute: By default, this will act the same as fixed, except the element will be positioned relative to the document instead of the viewport. This means that, as the page is scrolled, it will move with the page rather than stay at the same viewport location. However, if any element above it in the DOM, oftentimes referred to as an ancestor, has a position value other than static, then it will be positioned relative to that nearest positioned ancestor.
+
+11. Stacking Contexts
+When CSS goes 3D.
+
+Stacking Context
+A group of elements positioned together on the z-axis. Stacking contexts can be nested within other stacking contexts, and z-index values are used to determine the layering of elements with the same stacking context parent.
+
+12. Flexbox
+Ah, flexbox. 
+
+Also commonly known as "I can finally position things", "CSS ain't so bad", and "wow, I haven't punched my monitor today".
+
+Flexbox
+A layout model, also known as the Flexible Box Layout Module, particularly useful for building responsive designs with row or column layouts. An element can be made a flex container with display: flex, and all of its direct children will automatically be laid out as flex items.
+
+For flex containers, these are some of the most common properties used to layout their flex items:
+
+flex-direction: Determines which direction is the main-axis, either row or column. Additionally, row-reverse and column-reverse can be used to reverse the order of flex items.
+justify-content: Determines how elements are positioned along the main-axis with possible values of flex-start, flex-end, center, space-around, space-between, and space-evenly.
+align-items: Determines how elements are positioned along the cross-axis (the one not selected by flex-direction). Possible values are flex-start, flex-end, center, baseline, and stretch.
+flex-wrap: Determines if flex items can wrap to new lines with possible values of wrap and nowrap. wrap-reverse can also be used to wrap flex items with the lines in reverse order.
+align-content: Determines how lines are positioned along the cross-axis when flex items are wrapping on multiple lines. Possible values are flex-start, flex-end, center, space-around, space-between, and stretch.
+flex-flow: A shorthand for flex-direction and flex-wrap.
+gap: Determines the amount of space between flex items. This can take one or two length values. If it is given two, they will be treated as a row gap and a column gap respectively. Alternatively, a row-gap and column-gap property can be specified to individually set the gap between rows and columns.
+For flex items, these are some of the most common properties used to position themselves:
+
+align-self: Overrides the align-items value used for the flex container.
+flex-basis: Sets the initial size of the flex item along the main-axis (essentially this will act as width for the row axis and height for the column axis).
+flex-grow: Determines if the flex item is able to grow into extra space. If the value is 0, the flex item will not grow. Otherwise, it will take up as much extra space as possible, with larger grow values taking more space proportionally.
+flex-shrink: Determines if a flex item is able to shrink in the case that the flex items are too large for the container. Flex items with a value of 0 will not shrink. Otherwise they will all shrink proportionally based on their values, similar to flex grow. The higher the value, the more the flex item will potentially shrink.
+flex: A shorthand property for flex-grow, flex-shrink, and flex-basis in that order.
+order: Moves the flex-item to a different location amongst the other flex items rather than using the order defined in the DOM. All flex items default to having a value of 0. This means a value of -1 would move an item before all other items that have not changed their order. Likewise, a value of 1 would place the item at the end.
+
+13. CSS Grid
+Ah, the grid layout. 
+
+Also commonly known as "I have complete positional mastery over any 2-dimensional space", "CSS is actually awesome", and "so this is what true happiness feels like".
+
+CSS Grid
+A layout model used for creating responsive layouts of multiple rows and columns. An element can be made a grid container with display: grid, and all of its direct children will automatically be laid out as grid items in a single cell.
+
+A rectangular subsection of a grid is known as a grid area. The dividers between each row and column are known as grid lines, and the rows and columns they create are called tracks.
+
+For grid containers, these are some of the most common properties used to layout their grid items:
+
+grid-template-columns: Determines the number of columns and their sizes. The unit fr can be used as a fractional unit here to create a responsive design.
+grid-template-rows: Determines the number of rows and their sizes. The unit fr can be used as a fractional unit here to create a responsive design.
+grid-template-areas: Creates names for grid areas that grid items can place themselves in.
+justify-content: Determines how grid tracks are aligned along the inline-axis (row) with possible values including start, end, center, space-around, space-between, and space-evenly.
+align-content: Determines how grid tracks are aligned along the block-axis (column) with possible values including start, end, center, space-around, space-between, and space-evenly.
+align-items: Determines how grid items are aligned in columns (called the block-axis). Possible values include start, end, center, and stretch.
+justify-items: Determines how grid items are aligned in rows (called the inline-axis). Possible values include start, end, center, and stretch.
+place-items: A shorthand for both align-items and justify-items. If one value is given, it will apply to both. If two values are given, they will apply to align-items and justify-items respectively.
+gap: Determines the amount of space between grid items. This can take one or two length values. If it is given two, they will be treated as a row gap and a column gap respectively. Alternatively, a row-gap and column-gap property can be specified to individually set the gap between rows and columns.
+
+For grid items, these are some of the most common properties used to position themselves:
+
+grid-column-start: Determines what column this item starts on, based on a line number.
+grid-column-end: Determines what column this item ends on, based on a line number.
+grid-column: A shorthand for both grid-column-start and grid-column-end specified in the format start / end.
+grid-row-start: Determines what row this item starts on, based on a line number.
+grid-row-end: Determines what row this item ends on, based on a line number.
+grid-row: A shorthand for both grid-row-start and grid-row-end specified in the format start / end.
+grid-area: Places the item in a grid-area based on a name created in grid-template-areas.
+align-self: Overrides the align-items value used for the grid container.
+justify-self: Overrides the justify-items value used for the grid container.
+place-self: A shorthand for both align-self and justify-self in the same format as place-items.
+
+14. Working With Images
+Are images content or style? That is the question.
+
+Image Sprite
+A group of images all included in a single image file. These images are usually split on the client using the CSS background-image property along with background-position. The primary benefit of sprites is to reduce the total file size and the number of files the client needs to download, which can decrease page load times.
+
+15. CSS Inheritance
+Much like biological organisms can pass down traits from parent to offspring through the process of heredity, CSS elements can pass down properties from parent to child through the process of inheritance.
+
+CSS Inheritance
+How elements choose a value when none has been explicitly declared in any stylesheet. All properties are either inherited properties or non-inherited properties. Inherited properties will take their parent's value in the case no value has been set for the property. Non-inherited properties on the other hand will be set to initial in this case.
+
+While the default groupings of inherited and non-inherited properties is usually all that's needed, this can be changed by using any of these values for any declaration:
+
+inherit: The value should inherit from its parent, regardless of if it is normally an inherited property.
+initial: The value should be set to the value defined in the CSS specification. Note this is oftentimes different from browser defaults.
+unset: The value should be set to inherit if it is normally an inherited property, otherwise initial. This can be useful for "resetting" browser defaults from the user agent stylesheet.
+revert: The value should revert back to the next stylesheet in the cascade. For author stylesheets, this would act as if the author did not write any declaration for the property, but it would still honor the user agent and user stylesheets as normal.
+
+16. Responsive Design
+AlgoExpert is a perfect example of a beautifully responsive website. Go ahead, resize your browser window all you want—the layout won't break!
+
+Mobile First Design
+Building websites or applications with mobile devices as the primary use case, then scaling them up to larger devices with responsive CSS. In general, it is easier to scale a design up to larger screens than to scale it down to smaller screens. Along with the massive growth of mobile browsing, this makes mobile first design a great development workflow.
+
+17. Animations
+You know all those cool animations that are scattered across the AlgoExpert website? The ones that made you stop and think, "Whoa, that's pretty neat!"
+
+Yeah, they're all CSS.
+
+Transitions
+A css module for smoothly transitioning between values when a value is changed. Transitions can be defined with a combination of these properties:
+
+transition-property: The name of the CSS property to transition.
+transition-duration: How long the transition should take.
+transition-timing-function: How the transition should progress. This can take a variety of keyword values, such as linear and ease-in, or custom values using the cubic-bezier() or steps() functions.
+transition-delay: How long to wait before starting the transition.
+Alternatively, the transition property can be used as a shorthand for all of these values. The first time value will be used for the duration, and the second will be used for a delay. Other than that, the order does not matter.
+
+Animations
+A css module for animating properties, very similar to transitions, but with a bit more control. An animation is defined using keyframes as well as these properties:
+
+animation-name: The name of the keyframes animation.
+animation-duration: How long the animation should take.
+animation-fill-mode: If the element should stay in its animated position after the animation completes or if it should move to the starting position of the animation before it begins, specified with the backwards and forwards values respectively or both to follow the rules of both values.
+animation-direction: If the animation should play in normal or reverse order. A value of alternate can also be used to switch between normal and reverse, or alternate-reverse can be used to do the same, but starting with the reverse direction.
+animation-iteration-count: How many times to run the animation, or infinite to run the animation indefinitely.
+animation-play-state: If the animation is currently running or paused. This is particularly useful for pausing an animation using JavaScript.
+animation-timing-function: How the animation should progress through the keyframes. This can take a variety of keyword values, such as linear and ease-in, or custom values using the cubic-bezier() or steps() functions.
+animation-delay: How long to wait before starting the animation.
+Alternatively, the animation property can be used as a shorthand for all of these values. The first time value will be used for the duration, and the second will be used for a delay. Other than that, the order usually will not matter assuming the animation-name is not using a conflicting keyword with another possible value.
+
+@keyframes
+A keyword for defining points within an animation timeline. An animation is made up of a variety of keyframes, and the browser will fill in the spaces between the keyframes based on the timing function. Keyframes are defined using this syntax:
+
+The from and to keywords are equivalent to 0% and 100% respectively.
+
+18. CSS Variables
+Yup, you can declare variables in CSS.
+
+Nope, we couldn't believe it either.
+
+Custom Properties
+Also known as variables, these are used to keep track of repeated values in CSS. Custom properties always start with -- and can be included in any ruleset. However, most commonly they are defined on the :root ruleset so the variables will be accessible throughout the website. Custom properties are then used with the var() CSS function.
+
+19. Frameworks And Preprocessors
+Frameworks and preprocessors are like super steroids for your style sheets. Use them, and your code will become unstoppable. Even Thanos wielding the Infinity Gauntlet will fear the power of your CSS.
+
+CSS Framework
+Pre-written code that can be used to simplify development. Oftentimes these include ready to use classes, pre-built components and responsive layout systems.
+
+Preprocessor
+A program that converts code of another syntax into CSS that the browser can understand. Usually these add new features to CSS to make the code easier to read, write and maintain.
+
+20. CSS Methodologies And Best Practices
+Congratulations on making it to the end of the CSS Crash Course! It's certainly been a long journey. 
+
+we'll look at some advanced methodologies and high-level concepts that will help us define what it truly means to write good CSS.
+
+BEM
+The "Block, Element, Modifier" CSS methodology. This breaks CSS classes into three categories:
+
+Blocks: Standalone elements with their own meaning. These are referenced simply by the name of the block such as class="menu".
+Elements: Parts of a block without their own meaning. These are referenced by the name of the block, two underscores then the name of the element such as class="menu__item".
+Modifiers: Flags to change styles for blocks or elements, such as disabled or selected. These are prefixed by the class they modify and two dashes, and they are included in addition to that original class such as class="menu menu--disabled".
+
+OOCSS
+The "Object-Oriented" CSS methodology. This is based on object-oriented programming principles, which can be applied to CSS class design by treating UI components as objects. Styles are then given one of two categories:
+
+Structure: "Invisible" properties such as width and margin.
+Skin: "Visible" properties such as color and border.
+
+Along with separating structure and skin into classes, OOCSS also makes a clear distinction between content and containers. The idea here is that containers should function the same, regardless of the content inside of them. Moreover, content should not depend on the container it is nested within.
+
+Atomic CSS
+A CSS methodology based on the idea of minimizing any repeated declarations. Rather than creating classes based on components, Atomic CSS creates utility classes based on single declarations.
+
+SMACSS
+The "Scalable and Modular Architecture For CSS" methodology, usually pronounced as "smacks". This splits CSS into five different categories, each of which get their own file:
+
+Base: Page defaults, usually just type selectors.
+Layout: Major structural layout of the page, using ID and class selectors. The classes are usually prefixed with l- or layout-.
+Module: Smaller reusable components, usually using class selectors without any name prefixes.
+State: Specific states for layouts or modules, such as disabled or selected states, usually using class selectors again.
+Theme: Style rules for layouts and modules related to a theme, oftentimes based on user preferences such as a dark mode.
+ITCSS
+
+The "Inverted Triangle" CSS methodology. This methodology is mostly focused on the order of CSS code, rather than having opinions on naming conventions. The primary idea here is to have generic styles first, which should have the largest reach across elements and the least specific selectors. The exact layers of the triangle can be changed to fit the needs of a specific project, but a general structure looks like this:
+
+Settings: Global variables affecting the entire website.
+Tools: Mixins and functions for use with preprocessors.
+Generic: High level generic styles, usually to reset browser defaults for consistency across browsers.
+Elements: Defaults for elements using type selectors.
+Objects: The most generic classes, oftentimes for larger containers.
+Components: Classes for individual UI components.
+Trumps: !important overrides for when they are needed.

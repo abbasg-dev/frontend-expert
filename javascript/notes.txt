@@ -1,0 +1,209 @@
+1. Introduction
+JavaScript is the third and arguably most important pillar of the holy trinity of the modern web. Master it, and you'll be capable of breathing life into any webpage.
+
+2. JavaScript Basics
+As always, we begin by reviewing the nuts and bolts of the subject matter. Let's get started!
+
+JavaScript
+The primary programming language of the web, primarily used for adding functionality to websites. JavaScript is a general purpose multi-paradigm programming language with dynamic typing.
+
+Paradigm
+A style of programming. Oftentimes languages are built with a specific paradigm in mind, but JavaScript is known as a multi-paradigm language, because it allows for programming in a variety of paradigms. Some of the major paradigms of JavaScript include:
+
+Event-driven: Functions can be made to respond to events, such as when a user clicks on an element or scrolls down the page.
+Functional: Functions can be written as "pure functions", meaning functions that always have the same output for a given set of arguments and never produce side effects. Additionally, JavaScript supports first-class functions and higher-order functions. This means that functions can be treated as normal values, passed as arguments to other functions and returned from functions.
+Object-oriented: Objects can be created as custom data stores and they can be made to inherit from each other.
+Imperative: Programs can be written by explicitly describing the control flow, such as with loops and conditionals.
+Declarative: Programs can be written by describing the desired output with implicit control flow. Oftentimes this is associated with functional programming (e.g. using the forEach function to loop over an array instead of a for loop).
+
+Primitive
+The most basic data types of a language. In JavaScript, there are 7 primitive types:
+
+Number: Numeric values, including integers and decimal values.
+BigInt: Integers too large to store in a number.
+Boolean: A binary value of true or false.
+String: A sequence of characters.
+Symbol: A dynamically generated unique value.
+Null: A nonexistent value.
+Undefined: A value that has not been set.
+
+JavaScript has a typeof operator that can get the type of a value as a lowercase string. However, do be aware that this function does have some special casing.
+
+3. Variables And Scoping
+What do you call something that is both a paradox and a misnomer?
+
+A constant variable.
+
+let
+A keyword for declaring a block-scoped variable that cannot be accessed before initialization.
+
+var
+A keyword for declaring a function-scoped variable that is automatically initialized to undefined when it is hoisted.
+
+const
+A keyword for declaring a constant value. Constants have the same behavior as variables declared with let, except they cannot be reassigned.
+
+Block Scope
+The behavior of a variable that is only accessible inside of the block it was defined. Most of the time, the block will simply be the nearest pair of curly braces to the declaration.
+
+Function Scope
+The behavior of a variable that is accessible anywhere inside of the function it was defined.
+
+Hoisting
+The process by which the JavaScript engine moves variable declarations to the top of their scope, allocating memory for them before reaching the line of code where they are declared. For variables declared with var, they are initialized to undefined until reaching the line of code that initializes the variable. For variables declared with let or const, the variable is not initialized and thus cannot be accessed before the line of code that initializes it.
+
+4. Arrays
+The quintessential data structure that can be used in a wide array of different situations.
+
+Array
+A data structure for storing lists of information.
+
+JavaScript arrays are mutable and can contain data of different types. While these are just standard objects, they have a special syntax for easily creating and updating them.
+
+5. Objects
+Why is JavaScript a mean programming language? 
+
+Because it objectifies almost everything.
+
+Object
+The base non-primitive data structure of JavaScript used to store key-value pairs. Object keys are usually strings, but they can also be symbols. Values on the other hand can be any type.
+
+Objects are usually declared with the object literal syntax.
+
+Symbol
+A primitive value in JavaScript used for unique values.
+
+A symbol is created using the Symbol(description) function, which returns a unique symbol. Even if two symbols have the same description, they will still be considered unique.
+
+While symbols created using the Symbol(description) function are completely unique, symbols can also be created using Symbol.for(key). This works the same way, except two calls to this function with the same key will return the same symbol, based on a global symbol registry.
+
+6. Equality And Type Coercion
+== == ===
+
+However...
+
+== !== ===
+
+Loose Equality
+The most basic equality operator in JavaScript using ==. Loose equality compares values regardless of types following these steps:
+
+If both values are either null or undefined, return true.
+Convert all booleans to numbers. True converts to 1 and false converts to 0.
+If comparing a number to a string, convert the string to a number.
+If comparing an object to a string, convert the object using its toString() or valueOf() methods.
+If the types are the same, follow the same rules as strict equality.
+
+In general, strict equality should be preferred due to it being easier to predict. However, loose equality can be useful for checking against null and undefined at once with value == null.
+
+Strict Equality
+A JavaScript equality operator using ===. Strict equality compares both values and types following these steps:
+
+If either value is NaN, return false.
+If the values have different types, return false.
+If both values are null or both values are undefined, return true.
+If both values are objects, return true if they are the same object. False otherwise.
+If both values are of the same primitive type, return true if the values are the same. False otherwise.
+
+7. Syntactic Sugar And Modern JavaScript
+Not as sweet as table sugar, but delightful nonetheless.
+
+Arrow Function
+A more concise function syntax, particularly useful for replacing short anonymous functions. 
+
+However, if an arrow function only requires one line, then the curly braces and return keyword can be removed. Additionally, when these are used inline such as for a call to the array map function, the semicolon must be removed. Finally, if there is only one parameter, the parentheses around the parameter can also be removed. 
+
+There are a few constraints to arrow functions which will be explored throughout the crash course. The most important of these is that arrow functions do not have their own this binding. Additionally, arrow functions cannot be used as constructors or generators.
+
+Destructuring Assignment
+A JavaScript syntax for saving values from an array or object in variables.
+
+When destructuring an object, fields can also be renamed.
+
+Destructuring can also be used in a function parameter.
+
+Rest Operator
+A JavaScript operator using ... for condensing multiple elements into a single array. This uses the same syntax as the spread operator, but functionally is essentially the opposite.
+
+Rest syntax can be used in both arrays and objects to get all of the values not being destructured. 
+
+Moreover, rest syntax can be used for function parameters to accept an infinite number of arguments, which are accessible as an array.
+
+Spread Operator
+A JavaScript operator using ... for expanding iterables into individual elements.
+
+The spread syntax can also be used to combine two arrays. Similarly, objects can be spread as well. Moreover, {...obj} can be used as a shallow clone of an object, since it creates a new object with the same fields.
+
+Template Literal
+Strings created using backticks `` that allow for inlining expressions rather than needing concatenation. Inlined expressions use the syntax ${expression}.
+
+Template literals also allow for tagging to write a function that defines custom behavior for the template literals. Tagging can be read about further in the MDN documentation, but it doesn't tend to be used too often.
+
+Null Coalescing
+Also referred to as nullish coalescing, an operator using ?? for providing a default value if a value is null. If the value on the left side of the operator is not null or undefined, that value is used. Otherwise, the value on the right side of the operator is used.
+
+Optional Chaining
+A JavaScript operator using ?. for reading object properties without throwing an error if the object is null. However if any values in the chain are null or undefined, it will return undefined rather than throwing an error.
+
+Short Circuit Evaluation
+A method of utilizing the evaluation order of JavaScript to conditionally run code. This usually uses the && operator, because for it to return true, both the left and right expressions must be true. Since the browser runs code from left to right, if it encounters false on the left side, it does not even run the code on the right side. Thus, this can be used to conditionally run code.
+
+Less commonly, short circuit evaluation can also be used with the || operator. Since this operator only needs one expression to be true, if the left side is true then the right side will not be evaluated. This is essentially the opposite of the behavior with &&.
+
+8. Connecting JavaScript To HTML
+
+A little more nuanced than simply throwing a <script> tag into your HTML.
+
+<script>
+The HTML tag for adding JavaScript to the document. Usually the <script> appears in the <head> with no children. Instead of children, it usually has the src attribute set to the path of a JavaScript file.
+
+By default, scripts block the browser from continuing to parse and render the rest of the DOM until the script has finished downloading and executing. However, there are two boolean attributes that can change this behavior:
+
+defer: Fetch the script asynchronously without blocking the page. Only execute the script after the DOM has finished being parsed.
+async: Fetch the script asynchronously without blocking the page. Whenever the script is ready, stop parsing the DOM and execute the script. This is usually only for scripts that do not need access to the DOM, because otherwise the behavior will be inconsistent based on how quickly the script downloaded.
+
+Alternatively, scripts were traditionally placed at the bottom of the <body> to ensure the DOM finished loading before running the script. However, this is usually slower than using the defer attribute, since the script will not be downloaded until reaching the script tag at the end of the body.
+
+9. Dom Manipulation
+
+An acceptable form of manipulation.
+
+Dom Manipulation
+Using JavaScript to change the content, structure or styles of the page. There are a lot of functions and properties related to dom manipulation, but these are some of the more common ones:
+
+Getting Elements:
+
+document.getElementById(id): Gets a single element based on its id attribute.
+document.querySelector(cssSelector): Gets a single element based on a CSS selector. If multiple elements match the selector, returns the first one.
+document.querySelectorAll(cssSelector): Gets all elements matching a CSS selector as a NodeList.
+document.getElementsByTagName(tagName): Gets all elements with a specific HTML tag as an HTMLCollection.
+document.getElementsByClassName(className): Gets all elements with a specific class as an HTMLCollection.
+
+Setting Attributes:
+
+element.style.property: Sets a CSS property using inline styles, although CSS classes should usually be preferred. The style object will only contain inline styles, not those set with CSS.
+element.setAttribute('attribute', 'value'): Sets an HTML attribute to a specific value.
+element.textContent: The text content of an element, including that of any children. Note: this is slightly different from element.innerText, which only gets text that is actually rendered and element.innerHTML which gets the entire HTML code as a string.
+element.attribute: An alternative to the setAttribute function, attributes can be directly edited via their property name.
+element.classList: An object for updating CSS classes. Specifically, this contains 3 primary functions: add(className), remove(className) and toggle(className).
+
+Adding And Removing Elements:
+
+document.createElement(tagName): Creates a new HTML element.
+document.createTextNode(text): Creates a text node as an alternative to setting textContent.
+document.createDocumentFragment(): Creates a document fragment, which is useful for appending multiple elements at once after a loop.
+element.appendChild(element): Appends an element to the end of the contents of another element.
+element.append(node1, node2, ...): Appends 1 or more nodes (elements or text) to the end of the contents of another element.
+element.prepend(node1, node2, ...): Prepends 1 or more nodes (elements or text) to the beginning of the contents of another element.
+element.remove(): Removes the element from the DOM.
+
+Sizes and Scrolling:
+
+window.innerWidth: The width of the browser window.
+window.innerHeight: The height of the browser window.
+window.getComputedStyle(element): Gets styles as they are currently rendered on the page, converted to pixels.
+element.clientHeight: The height of visible content and padding.
+element.offsetHeight: The height of visible content, padding, borders and scrollbars.
+element.scrollHeight: The height of all content and padding, including content scrolled out of view.
+element.offsetTop: The distance from the outer top border of the element to the inner top border of the nearest positioned parent.
+element.scrollIntoView(): Scrolls the container so the element is in view.
+element.scrollTo(optionsObj): Scrolls the element to a specified top value in the options object. Additionally, behavior: 'smooth' will create a smooth transition.

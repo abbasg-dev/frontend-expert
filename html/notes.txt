@@ -1,0 +1,151 @@
+1. Introduction
+HTML might not be the most exciting topic in computer science, but it lies at the heart of web development and is requisite knowledge for any frontend engineer.
+
+2. HTML Basics
+In order to build a solid foundation, we need to start with some basics. Let's begin!
+
+HTML
+HyperText Markup Language is the primary language of the web, containing the content and structure of a website.
+
+Tag
+The primary method of marking up content using HTML. Tags use the syntax <tagname>content</tagname>.
+The left side tag, such as <p>, is referred to as the opening tag. The right side tag, such as </p> is referred to as the closing tag. Everything inside of the tags is the content, which will actually be rendered on the page. The combination of the opening tag, content and closing tag are referred to as a complete element.
+Some tags don't have any content, so we call these empty tags or self-closing tags. These either use the opening tag syntax or <tagname />.
+
+Attribute
+Extra information provided to HTML elements, similar to function parameters.
+Attributes use the syntax <tagname attribute="value">content</tagname>. The attribute name will always come after the tag name, with a space in between them. The quoted value will then be separated from the attribute name by an equals sign.
+A small number of attributes are booleans rather than strings. Any value for a boolean attribute will be treated as true, so all of the following checkboxes would be disabled.
+
+<!DOCTYPE html>
+The required first line of every HTML file for telling the browser what version of html to use. A doctype of html will use the modern HTML5 standard. While a page will usually render properly without a doctype declaration, they should still always be included as some older browsers will not render pages following the modern specification without it (this is sometimes called "quirks" mode).
+
+<head>
+The tag containing metadata about the HTML document (i.e. anything that isn't displayed on the page). The <head> of the HTML file should be the first tag within the <html> tag.
+The <title> is the only required tag within the <head>. This tag gives the page a title, which is used for the name of the tab in most browsers, and it gets used for search results in many search engines.
+
+<body>
+The tag containing the content of the webpage. The <body> of the HTML file should be the second tag within the <html> tag, just below the <head>.
+
+3. Semantic HTML
+If a human being were to read your markup code without any accompanying visual representation, would they still have a clear understanding of the general structure of your page?
+
+HTML that clearly describes the content of the page. HTML loses its semantic meaning when tags are misused, or generic tags (namely <div> and <span>) are overused instead of semantic tags.
+Semantic HTML includes the usage of semantic grouping tags, which give meaning to different sections of the page. These are some of the most commonly used semantic grouping tags:
+
+<article>: Self contained, independently distributable content.
+<section>: Thematic grouping of content, not self contained.
+<header>: Introductory content.
+<main>: Main content, limited to one per page.
+<nav>: A section of links, oftentimes for the primary navigation of the page.
+<aside>: Non-vital content indirectly related to main content. The page would make sense without this content.
+<footer>: Footer of the document, oftentimes containing copyright information.
+
+4. Essential HTML Tags
+More common than the common housefly, these HTML tags are virtually ubiquitous and can be found populating nearly every webpage.
+
+<p>
+The paragraph tag, usually used for blocks of text (although they can contain other elements that are part of the paragraph, such as images).
+
+Heading Tags
+HTML tags represented by <h1> through <h6>. <h1> is the top level heading, while <h2> is a secondary subheading and so on.
+
+<img>
+The image tag. This is an empty tag, and it should always include two primary attributes:
+
+src: The path to the image, either relative or absolute.
+alt: Alternative text to be used with screen readers or any time the image cannot be displayed.
+
+<ul>
+he unordered list tag, used for a list where the order does not matter. By default, most browsers will show this as a bulleted list.
+The unordered list should contain any number of <li> tags.
+
+<ol>
+The ordered list tag, used for a list where the order matters. By default, most browsers will show this as a numbered list.
+The ordered list should contain any number of <li> tags.
+
+<li>
+The list item tag, used for individual elements in both unordered and ordered lists.
+List items can also contain other lists to create nested lists.
+
+<pre>
+The preformatted text tag. This tag preserves whitespace, which can be useful when indentation and newlines need to be preserved.
+
+<br>
+The line break tag. This is an empty tag used to create a line break in text, such as for the introduction of an email or new lines in a poem. However, this tag should not be used just for spacing out elements as that can be accomplished with CSS.
+
+<hr>
+The horizontal rule tag. This is an empty tag used to create a thematic break between content, drawn as a horizontal line by default. 
+
+<a>
+The anchor tag, used for linking to other pages. This tag should include an href attribute with the path to the page being linked (absolute or relative).
+
+<em>
+The emphasis tag, usually rendered as italics by default in the browser.
+
+<strong>
+The strong tag, usually rendered as bold by default in the browser.
+
+5. Tables
+Tables are best used to organize your page layout! 
+Just kidding. Please don't ever use table layouts. This isn't 1996.
+
+An HTML tag for representing data with rows and columns. As a general rule, anything that could go in a spreadsheet probably also makes sense in a <table>
+
+There are a variety of tags associated with tables, with these being some of the most common:
+
+<tr>: A single row in the table.
+<th>: A heading in the table. This should be used with the scope attribute of either row or col to choose what the content is a heading for.
+<td>: A single piece of data in the table, also referred to as a cell.
+<thead>: A grouping tag for the heading of a table, usually containing a single <tr> with column headings.
+<tbody>: A grouping tag for the body of the table, used for containing the primary rows of data.
+<tfoot>: A grouping tag for the footer of the table.
+<caption>: A caption or title for the table.
+
+6. Forms
+It is often joked that frontend developers spend most of their time just editing buttons on forms.
+Theoretically though, if this turned out to be true, wouldn't it behoove you to ensure you knew your way around forms?
+
+<form>
+An HTML tag for a section of interactive inputs, used for submitting information to the server. Forms usually contain a variety of label-input pairs and a submit button.
+
+7. Document Object Model
+Ah, the Document Object Model. A term that you've heard many times before, that feels intimately familiar, yet that you couldn't define if your life—or your frontend interview—depended on it. Let's change that.
+
+The programming interface for interacting with an HTML document represented as a tree data structure. Each HTML element in the document is a node in the DOM tree, with nested content represented as children in the tree.
+
+8. Accessibility
+Accessible web development leads to a better user experience for all and, ultimately, to a more inclusive internet. In that spirit, let us look at some of the best practices to follow and some markup elements to include when designing with accessibility in mind.
+
+Accessibility
+Building applications usable by as many people as possible. Oftentimes this means utilizing semantic HTML and ensuring the application works properly with various assistive technologies.
+
+Accessibility Tree
+A tree representation of the page focusing on information specific to accessibility. Each node in this tree contains information such as the role, state, name and description.
+The accessibility tree is created from the DOM tree and kept in sync with it. Assistive technologies such as screen readers interact with the accessibility tree rather than directly with the DOM.
+
+WAI-ARIA
+The "Web Accessibility Initiative - Accessible Rich Internet Applications" specification for accessible HTML created by the World Wide Web Consortium (W3C). Oftentimes referred to as just ARIA, this contains a set of HTML attributes that can be added to provide extra information to the accessibility tree.
+
+ARIA attributes are usually grouped into three main categories:
+
+Roles: What the element is doing, used to define the purpose of the element. These can be broken down into a few main subgroups:
+	Landmark: Major content areas, navigational landmarks.
+	Structure: Document structure information.
+	Widget: Interactive elements.
+	Window: Sub-windows in the browser.
+	Live Region: Regions with dynamically changing content.
+Properties: Extra meaning and characteristics of the element, such as labels.
+States: Current state of the element, such as if it is disabled.
+
+9. Meta Tags
+Metadata is special information about your webpage that can be used by search engines and web browsers to do cool stuff. But where do you define this data?
+
+<meta>
+An HTML tag for providing extra metadata about a webpage. Most meta tags will use a name and content pair for the type of metadata and its value.
+
+Favicon
+Also called a favorite icon, the icon for a webpage. Browsers usually show these in a variety of places, such as next to the tab name. Favicons are created using the <link> tag.
+
+<base>
+A tag for setting the document base URL, which will be used for all relative links on the page.
