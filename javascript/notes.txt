@@ -298,3 +298,22 @@ An internal data structure used for keeping track of identifiers (variable and f
 
 Lexical Scoping
 The scoping system in JavaScript that ensures all code blocks have access to all identifiers in their parent environment. When an identifier is not defined locally, JavaScript will look to the parent environment for it. If it is still not found there, it will look in grandparent's environment and so on before looking in the global environment.
+
+this
+A JavaScript keyword for referencing the context in which the current code is running.
+
+The value of this is determined at runtime. In the browser, it will follow these general rules:
+
+At the top level of a file (the global context), this refers to the global object, which is the window.
+In a standard function without strict mode, this refers to the global object, which is the window.
+In a standard function in strict mode, this is undefined.
+In an object method, this refers to that object.
+In a constructor function, this refers to the object being constructed.
+When using event listeners, the object being listened to will be bound to this, assuming a standard function was used.
+Arrow functions do not create their own this context, instead they retain the value of the enclosing context.
+
+JavaScript provides three functions for binding the value of this to functions:
+
+func.bind(thisArg): Returns a new function with thisArg bound to this.
+func.call(thisArg, x, y): Calls func(x, y) with thisArg bound to this.
+func.apply(thisArg, [x, y]): Calls func(x, y) with thisArg bound to this.
