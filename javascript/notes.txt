@@ -344,3 +344,14 @@ Classes can also extend other classes, which internally creates a prototype chai
 Currying
 The process of transforming a function to treat its parameters as a sequence of individual function calls that each take one parameter.
 Currying is achieved by creating functions that return other functions, taking advantage of closures.
+
+Generator
+An iterable object created by using a generator function.
+
+A generator function is defined using function*. Then each yield results in another item being added to the iterable generator object.
+
+The generator object has three methods:
+
+next(value): Returns an object with the next value in the iterator and a done boolean. Optionally passes a value back into the generator function.
+return(value): Adds a passed in argument to the iterable results and ends iteration.
+throw(error): Throws an error, stopping code execution unless the error is caught.
