@@ -355,3 +355,19 @@ The generator object has three methods:
 next(value): Returns an object with the next value in the iterator and a done boolean. Optionally passes a value back into the generator function.
 return(value): Adds a passed in argument to the iterable results and ends iteration.
 throw(error): Throws an error, stopping code execution unless the error is caught.
+
+Modules
+JavaScript code that runs in isolation, without polluting the global namespace.
+
+Traditionally modules were implemented using immediately invoked function expressions, but in modern JavaScript there is a type="module" attribute that can be added to script tags. This attribute will have a few key effects:
+
+Identifiers at the top level will be scoped to the file rather than globally.
+The file will be in strict mode by default.
+The await keyword can be used at the top level.
+The script will be deferred by default.
+Modules can then access each other by using the import and export keywords.
+
+Immediately Invoked Function Expression
+Also called an IIFE, a function that is immediately called after its definition. This can be useful for a variety of purposes, most notably to create a function scope to isolate code with.
+
+There are a few ways to define an IIFE, but the most common is using an anonymous or arrow function. This function is then wrapped in parentheses, which causes it to be treated as an expression. Finally, () is added to call the function.
