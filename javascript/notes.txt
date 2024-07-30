@@ -402,3 +402,9 @@ Microtasks can be considered to have a higher priority than standard tasks, sinc
 Chunking
 A process for preventing slow functions from clogging the call stack and thus making the entire page unresponsive. The core idea of chunking is to take large tasks and split them up into smaller ones.
 In practice, chunking is usually achieved by using setTimeout after some number of iterations, forcing future chunks to move to the end of the task queue.
+
+Web Worker
+A browser API for running scripts in a separate thread from the main execution thread.
+A worker object is created with the Worker(filePath) constructor function. The argument to this function is a path to another JavaScript file that will run in a separate thread.
+Workers can send messages back and forth with the main thread via the postMessage(message) method and the onmessage event.
+In general, most workers are dedicated workers, meaning they can only communicate with the script that created them. However, a SharedWorker can also be created to share a worker with multiple tabs or iframes. That said, SharedWorkers still do not have widespread support across browsers.
