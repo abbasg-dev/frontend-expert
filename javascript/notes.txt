@@ -440,3 +440,11 @@ WeakMaps hold "weak" references to objects, meaning that they do not prevent the
 
 WeakSet
 A built-in JavaScript class for holding unique values similar to the Set class. However, a WeakSet acts just like a WeakMap, meaning that the values must all be objects, and references to those objects are "weakly" held.
+
+JavaScript Frameworks
+
+JavaScript Library
+A collection of pre-written JavaScript code, usually in the form of functions that can be called throughout other projects to simplify the development process.
+
+JavaScript Framework
+A collection of pre-written JavaScript code that provides some additional structure to a project. It is often said that frameworks are more "opinionated" than libraries, or that frameworks generally call your code as opposed to your code calling a library.
