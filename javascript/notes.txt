@@ -408,3 +408,15 @@ A browser API for running scripts in a separate thread from the main execution t
 A worker object is created with the Worker(filePath) constructor function. The argument to this function is a path to another JavaScript file that will run in a separate thread.
 Workers can send messages back and forth with the main thread via the postMessage(message) method and the onmessage event.
 In general, most workers are dedicated workers, meaning they can only communicate with the script that created them. However, a SharedWorker can also be created to share a worker with multiple tabs or iframes. That said, SharedWorkers still do not have widespread support across browsers.
+
+Cookies
+The simplest form of browser storage, comprised of string key-value pairs. Cookies are most often set by the server to store information such as the logged in user account, however they can also be created via the document.cookie JavaScript property.
+
+Local Storage
+Part of the web storage API, a system for storing information in the browser without any expiration date. Values can be added to local storage with localStorage.setItem('key', 'value'), and the value can be retrieved with localStorage.getItem('key').
+
+Session Storage
+Part of the web storage API, a system for storing information in the browser that expires at the end of a session. Values can be added to session storage with sessionStorage.setItem('key', 'value'), and the value can be retrieved with sessionStorage.getItem('key').
+
+IndexedDB
+A browser API for storing complex objects. IndexedDB uses object stores, which are similar to tables in relational databases. Each object in the object store must then have a unique key used to identify it.
