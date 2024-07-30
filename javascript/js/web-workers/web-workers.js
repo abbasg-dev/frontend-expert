@@ -5,7 +5,7 @@ slowButton.addEventListener("click", slowOperation);
 sayHelloButton.addEventListener("click", sayHello);
 
 function slowOperation() {
-  const worker = new SharedWorker("js/worker.js");
+  const worker = new SharedWorker("js/web-workers/worker.js");
   // worker.postMessage(10);
   worker.port.postMessage(10);
 
