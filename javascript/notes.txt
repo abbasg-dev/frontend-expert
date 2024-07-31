@@ -451,3 +451,8 @@ A collection of pre-written JavaScript code that provides some additional struct
 
 TypeScript
 A superset of JavaScript adding static typing. The primary purpose of using TypeScript is to prevent bugs related to incorrect types and to improve the development workflow. Since browsers only understand standard JavaScript, TypeScript is compiled back into JavaScript.
+
+Debugging Strategies
+
+Developer Tools
+A set of tooling provided by the browser to simplify the process of debugging frontend code.
