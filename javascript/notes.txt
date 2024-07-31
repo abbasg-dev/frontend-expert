@@ -456,3 +456,11 @@ Debugging Strategies
 
 Developer Tools
 A set of tooling provided by the browser to simplify the process of debugging frontend code.
+
+Writing Clean JavaScript
+
+Autoformatter
+A program that automatically formats code based on a set of rules, making it easy to maintain stylistic consistency. Prettier is the most common autoformatter, but there are other alternatives as well.
+
+Style Guide
+A document describing the preferred coding style for a project or organization used to promote clean and consistent code. Many style guides, such as the Google JavaScript Style Guide , are open source.
