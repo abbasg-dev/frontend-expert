@@ -30,3 +30,23 @@ Event-Driven Programming
 
 SyntheticEvent
 The object type passed to React event handler functions. Synthetic events generally work the same as native events, but with more consistency across browsers.
+
+State
+Data specific to an instance of a component that persists between renders and causes re-renders when changed.
+
+Hook
+A JavaScript function used to "hook" into React features such as state and the larger component lifecycle. The names of hooks always begin with use, and they cannot be called conditionally.
+
+useState
+A React hook for creating stateful components. The useState function takes in an initial state value (or a function that returns that initial value), and it returns an array with two elements: the current state value and a setter function.
+
+useReducer
+An alternative React hook for creating stateful components, oftentimes used for more complex state. The useReducer function takes in a reducer function and the initial state. It returns an array with two elements: the current state value and a dispatch function.
+The reducer function takes in the previous state and an action object as parameters, then it returns the new state. Usually the action object will have a type property, which will be used in a switch statement.
+The dispatch function will then take in an object, which will be passed as the action to the reducer function.
+
+Lifting State Up
+A common React pattern of moving shared state up to the lowest common ancestor component in the tree. This allows for a single component to keep track of the state and pass the current value and setter function down through props.
+
+Controlled Component
+A pattern of using React state to control the current state of an input, rather than allowing the native elements to control their own state (known as an uncontrolled component).

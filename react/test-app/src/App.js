@@ -1,39 +1,15 @@
-import "./App.css";
+import JSX from "./components/JSX";
+import Props from "./components/Props";
+import SyntheticEvent from "./components/SyntheticEvent";
+import State from "./components/State";
 
 export default function App() {
   return (
     <>
-      <Comment username="Abbas" time={new Date().toString()}>
-        <h1>Hello World</h1>
-        <p>This is a comment</p>
-      </Comment>
-      <MyButton onClick={handleClick}>Click Me</MyButton>
+      <JSX />
+      <Props />
+      <SyntheticEvent />
+      <State />
     </>
-  );
-}
-
-function Comment({ username, time, children }) {
-  return (
-    <section>
-      <p>
-        {username} commented at {time}
-      </p>
-      {children}
-    </section>
-  );
-}
-
-function handleClick(event) {
-  console.log(event.nativeEvent);
-}
-
-function MyButton(props) {
-  return (
-    <button
-      {...props}
-      style={{
-        color: "red",
-      }}
-    />
   );
 }
