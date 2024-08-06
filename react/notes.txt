@@ -1,2 +1,16 @@
 Introduction
 React is one of the most popular frontend libraries to create performant and maintainable user interfaces.
+
+React Basics
+
+React
+A JavaScript library developed by Facebook for building user interfaces. React uses a component-based architecture to create interfaces with an intuitive declarative approach.
+
+Component
+A reusable independent piece of a user interface. In modern React, components are usually functional components, which are simply functions that return JSX.
+
+JSX
+Short for JavaScript XML, a JavaScript syntax extension for inlining XML and HTML in JavaScript.
+
+ReactDOM
+A package used with React to work as the bridge between React elements and the actual DOM in the browser. The most frequently used ReactDOM function is the render function, which adds a component to the DOM.
