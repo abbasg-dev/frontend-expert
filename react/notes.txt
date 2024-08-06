@@ -22,3 +22,6 @@ Fragments can also be created by using an empty tag, rather than the Fragment ex
 
 Conditional Rendering
 The process of changing the returned element of a component based on some condition. Conditional rendering can be achieved in a variety of ways, but the most common utilizes ternary operators or short circuit evaluation. This works because null, undefined, true and false all do not render anything.
+
+Props
+A JavaScript object passed as a parameter to functional components, containing all of the key-value pairs that were passed as attributes to the component.
