@@ -14,3 +14,11 @@ Short for JavaScript XML, a JavaScript syntax extension for inlining XML and HTM
 
 ReactDOM
 A package used with React to work as the bridge between React elements and the actual DOM in the browser. The most frequently used ReactDOM function is the render function, which adds a component to the DOM.
+
+React.Fragment
+A React container component that renders its children without adding any additional DOM nodes. This can be used for returning multiple adjacent elements without wrapping them in an unnecessary element.
+
+Fragments can also be created by using an empty tag, rather than the Fragment export from React.
+
+Conditional Rendering
+The process of changing the returned element of a component based on some condition. Conditional rendering can be achieved in a variety of ways, but the most common utilizes ternary operators or short circuit evaluation. This works because null, undefined, true and false all do not render anything.
