@@ -25,3 +25,8 @@ The process of changing the returned element of a component based on some condit
 
 Props
 A JavaScript object passed as a parameter to functional components, containing all of the key-value pairs that were passed as attributes to the component.
+
+Event-Driven Programming
+
+SyntheticEvent
+The object type passed to React event handler functions. Synthetic events generally work the same as native events, but with more consistency across browsers.
