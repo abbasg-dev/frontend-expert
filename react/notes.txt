@@ -73,3 +73,8 @@ A React hook for creating a ref. The useRef hook takes in an initial value and r
 
 React.forwardRef
 A function used by a custom component to forward a ref attribute on to a child element. The forwardRef function is a higher-order component function, meaning it takes in a component and returns a new one. In this case, it takes a component that has a second parameter for the ref.
+
+useImperativeHandle
+A React hook for customizing the value provided to a parent component when using a ref. The useImperativeHandle hook takes in a ref as the first parameter, followed by a callback function and an optional dependency array.
+The return value of the callback function will act as the current value of the ref. If any item in the dependency array changes between renders, the callback function will be invoked again to recalculate the current value.
+Since useImperativeHandle requires a ref on a custom component, it should always be used with React.forwardRef.

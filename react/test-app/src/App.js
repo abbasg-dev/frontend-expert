@@ -1,19 +1,21 @@
-import JSX from "./components/JSX";
-import Props from "./components/Props";
-import SyntheticEvent from "./components/SyntheticEvent";
-import State from "./components/State";
-import DisplayCounter from "./components/ComponentLifecycle";
-import Refs from "./components/Refs";
+// import JSX from "./components/JSX";
+// import Props from "./components/Props";
+// import SyntheticEvent from "./components/SyntheticEvent";
+// import State from "./components/State";
+// import DisplayCounter from "./components/ComponentLifecycle";
+// import Refs from "./components/Refs";
+import ImperativeReact from "./components/ImperativeReact";
 
 export default function App() {
   return (
     <>
-      <JSX />
+      {/* <JSX />
       <Props />
       <SyntheticEvent />
       <State />
       <DisplayCounter />
-      <Refs />
+      <Refs /> */}
+      <ImperativeReact />
     </>
   );
 }
