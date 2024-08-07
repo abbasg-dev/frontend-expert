@@ -50,3 +50,17 @@ A common React pattern of moving shared state up to the lowest common ancestor c
 
 Controlled Component
 A pattern of using React state to control the current state of an input, rather than allowing the native elements to control their own state (known as an uncontrolled component).
+
+Component Lifecycle
+The different stages that an instance of a component goes through. There are three primary stages to the React lifecycle:
+1. Mounting: The component renders for the first time.
+2. Updating: The component re-renders whenever state changes or the props are updated by the parent component. A component can update many times without ever mounting again.
+3. Unmounting: The component is removed from the DOM. This is the final stage of the lifecycle, and a component cannot update again once it has been unmounted. However, a new instance of the component can still be mounted.
+
+useEffect
+A React hook for performing side effects around the component lifecycle. The useEffect hook takes in a callback function and an optional dependency array.
+If no dependency array is provided, the callback function will run on every render. If there is a dependency array provided, the callback function will only run on mount or when an item in that array has changed (note that objects must be new objects to be considered to have changed). To avoid bugs related to effects using stale values from previous renders, the dependency array should contain all values that the callback uses that could change between renders.
+The callback function can also return a cleanup function, which will run on unmount and before the main effect function runs on any re-renders.
+
+useLayoutEffect
+A React hook for performing side effects around the component lifecycle in the same way as useEffect. The only difference between the two functions is that useLayoutEffect works synchronously, meaning the effects always finish running before the browser paints. This hook should only be used for effects that will make visual changes to the DOM, because otherwise the synchronous nature will give worse performance than useEffect without any benefits.
