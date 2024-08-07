@@ -64,3 +64,12 @@ The callback function can also return a cleanup function, which will run on unmo
 
 useLayoutEffect
 A React hook for performing side effects around the component lifecycle in the same way as useEffect. The only difference between the two functions is that useLayoutEffect works synchronously, meaning the effects always finish running before the browser paints. This hook should only be used for effects that will make visual changes to the DOM, because otherwise the synchronous nature will give worse performance than useEffect without any benefits.
+
+Ref
+A React value specific to an instance of a component that persists between renders, but updating the value does not cause a re-render (unlike state). Refs are oftentimes used to reference the DOM node associated with the component, which can be achieved with the ref attribute.
+
+useRef
+A React hook for creating a ref. The useRef hook takes in an initial value and returns a ref. The ref is simply an object with a current property set to the current value.
+
+React.forwardRef
+A function used by a custom component to forward a ref attribute on to a child element. The forwardRef function is a higher-order component function, meaning it takes in a component and returns a new one. In this case, it takes a component that has a second parameter for the ref.
