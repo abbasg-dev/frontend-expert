@@ -4,7 +4,8 @@
 // import State from "./components/State";
 // import DisplayCounter from "./components/ComponentLifecycle";
 // import Refs from "./components/Refs";
-import ImperativeReact from "./components/ImperativeReact";
+// import ImperativeReact from "./components/ImperativeReact";
+import Contexts from "./components/Contexts";
 
 export default function App() {
   return (
@@ -14,8 +15,9 @@ export default function App() {
       <SyntheticEvent />
       <State />
       <DisplayCounter />
-      <Refs /> */}
-      <ImperativeReact />
+      <Refs />
+      <ImperativeReact />*/}
+      <Contexts />
     </>
   );
 }

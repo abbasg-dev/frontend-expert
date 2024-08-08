@@ -78,3 +78,13 @@ useImperativeHandle
 A React hook for customizing the value provided to a parent component when using a ref. The useImperativeHandle hook takes in a ref as the first parameter, followed by a callback function and an optional dependency array.
 The return value of the callback function will act as the current value of the ref. If any item in the dependency array changes between renders, the callback function will be invoked again to recalculate the current value.
 Since useImperativeHandle requires a ref on a custom component, it should always be used with React.forwardRef.
+
+Context
+A way to pass values down a component tree without needing to pass props through every component (known as prop drilling). Contexts are generally useful for global state needed throughout an application or page, which would be inconvenient to pass as props to every element needing it.
+
+React.createContext
+A react function for creating a context object. This function takes in a default value, which will be used if there is no matching context provider in a tree.
+This context would then have a provider component, which must be above any components in the tree that wish to use the context. The value prop will be passed as the value to all children using the context.
+
+useContext
+A React hook for using a context. The useContext function takes in a context object created with createContext, and it returns the value from the first context provider of that context above it in the tree.
