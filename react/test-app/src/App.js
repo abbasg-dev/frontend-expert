@@ -8,7 +8,8 @@
 // import Contexts from "./components/Contexts";
 // import ComponentLists from "./components/ComponentLists";
 // import Performance from "./components/Performance";
-import CustomHooks from "./components/CustomHooks";
+// import CustomHooks from "./components/CustomHooks";
+import Portals from "./components/Portals";
 
 export default function App() {
   return (
@@ -22,8 +23,9 @@ export default function App() {
       <ImperativeReact />
       <Contexts />
       <ComponentLists />
-      <Performance />*/}
-      <CustomHooks />
+      <Performance />
+      <CustomHooks />*/}
+      <Portals />
     </>
   );
 }
