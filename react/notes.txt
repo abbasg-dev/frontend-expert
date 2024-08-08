@@ -106,3 +106,6 @@ A React function for dynamically importing components, creating a potential perf
 
 React.Suspense
 A react component for specifying a fallback interface while a child component is preparing to render (such as waiting for a lazy import). The Suspense component takes a fallback prop of a React element, and its children prop is a suspending component.
+
+Custom Hook
+A helper function that uses hooks. When hook code becomes redundant or too long to easily read, it can be helpful to move that code into a helper function. To denote that this helper function uses a hook itself, the name should be prefixed with use just like the built-in React hook functions.

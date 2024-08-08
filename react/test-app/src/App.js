@@ -7,7 +7,8 @@
 // import ImperativeReact from "./components/ImperativeReact";
 // import Contexts from "./components/Contexts";
 // import ComponentLists from "./components/ComponentLists";
-import Performance from "./components/Performance";
+// import Performance from "./components/Performance";
+import CustomHooks from "./components/CustomHooks";
 
 export default function App() {
   return (
@@ -20,8 +21,9 @@ export default function App() {
       <Refs />
       <ImperativeReact />
       <Contexts />
-      <ComponentLists />*/}
-      <Performance />
+      <ComponentLists />
+      <Performance />*/}
+      <CustomHooks />
     </>
   );
 }
