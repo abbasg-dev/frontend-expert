@@ -88,3 +88,7 @@ This context would then have a provider component, which must be above any compo
 
 useContext
 A React hook for using a context. The useContext function takes in a context object created with createContext, and it returns the value from the first context provider of that context above it in the tree.
+
+Component Lists
+Key Prop
+A prop passed to each element in a list to help React keep track of those elements. Key props should be unique identifiers. By passing key props, if the list changes, React can easily know which elements need to be mounted, updated, and unmounted.

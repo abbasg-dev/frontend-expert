@@ -5,7 +5,8 @@
 // import DisplayCounter from "./components/ComponentLifecycle";
 // import Refs from "./components/Refs";
 // import ImperativeReact from "./components/ImperativeReact";
-import Contexts from "./components/Contexts";
+// import Contexts from "./components/Contexts";
+import ComponentLists from "./components/ComponentLists";
 
 export default function App() {
   return (
@@ -16,8 +17,9 @@ export default function App() {
       <State />
       <DisplayCounter />
       <Refs />
-      <ImperativeReact />*/}
-      <Contexts />
+      <ImperativeReact />
+      <Contexts />*/}
+      <ComponentLists />
     </>
   );
 }
