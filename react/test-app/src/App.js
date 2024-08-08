@@ -6,7 +6,8 @@
 // import Refs from "./components/Refs";
 // import ImperativeReact from "./components/ImperativeReact";
 // import Contexts from "./components/Contexts";
-import ComponentLists from "./components/ComponentLists";
+// import ComponentLists from "./components/ComponentLists";
+import Performance from "./components/Performance";
 
 export default function App() {
   return (
@@ -18,8 +19,9 @@ export default function App() {
       <DisplayCounter />
       <Refs />
       <ImperativeReact />
-      <Contexts />*/}
-      <ComponentLists />
+      <Contexts />
+      <ComponentLists />*/}
+      <Performance />
     </>
   );
 }
