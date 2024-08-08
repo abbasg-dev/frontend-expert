@@ -9,7 +9,8 @@
 // import ComponentLists from "./components/ComponentLists";
 // import Performance from "./components/Performance";
 // import CustomHooks from "./components/CustomHooks";
-import Portals from "./components/Portals";
+// import Portals from "./components/Portals";
+import ClassBasedComponents from "./components/ClassBasedComponents";
 
 export default function App() {
   return (
@@ -24,8 +25,9 @@ export default function App() {
       <Contexts />
       <ComponentLists />
       <Performance />
-      <CustomHooks />*/}
-      <Portals />
+      <CustomHooks />
+      <Portals />*/}
+      <ClassBasedComponents />
     </>
   );
 }
