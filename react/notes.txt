@@ -136,3 +136,14 @@ An official React browser extension for debugging React.
 
 DRY Component
 Short for don't repeat your code, a principle involving refactoring any repeated code into helper functions. In React, we follow DRY principles by moving shared interfaces into helper components and common hook logic into custom hooks.
+
+React Under The Hood
+
+React Element
+The internal object representation of a node in the React tree. React elements can represent either DOM nodes or React components.
+
+Virtual DOM
+A "virtual" representation of the DOM kept by React internally. Since this data structure is not tied to the actual DOM, it is much quicker to update than the DOM.
+
+Reconciliation
+The algorithm used by React to determine the "diff" between two trees of React elements. After each state update, React runs the reconciliation algorithm to determine what has changed, and that changelog is sent to the rendering function (in the case of the browser, this is from React DOM) which can update the page using the information.
