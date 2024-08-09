@@ -119,3 +119,17 @@ A React component that catches errors in child components, preventing the entire
 Error boundaries must be class-based components in order to take advantage of two lifecycle methods:
 static getDerivedStateFromError(error): Called during the render phase and updates the current state of the component.
 componentDidCatch(error, errorInfo): Called during the commit phase for the purpose of side-effects related to the caught error.
+
+React.StrictMode
+A React component for putting a component in strict mode. Strict mode has two primary benefits for assisting in debugging:
+It provides warnings when using deprecated functions or lifecycle methods.
+It double-invokes some functions, such as functional components. This helps find potential bugs related to side-effects in functions that should not have side-effects.
+
+React.Profiler
+A React component for tracking how often a component renders. The Profiler requires two props:
+id: A unique identifier.
+onRender: A callback function to run after the component renders (during the commit phase).
+For performance reasons, the Profiler is ignored in production mode.
+
+React DevTools
+An official React browser extension for debugging React.
