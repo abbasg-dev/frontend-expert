@@ -11,7 +11,7 @@
 // import CustomHooks from "./components/CustomHooks";
 // import Portals from "./components/Portals";
 // import ClassBasedComponents from "./components/ClassBasedComponents";
-import ErrorHandling from "./components/ErrorHandling";
+// import ErrorHandling from "./components/ErrorHandling";
 
 export default function App() {
   return (
@@ -28,8 +28,8 @@ export default function App() {
       <Performance />
       <CustomHooks />
       <Portals />
-      <ClassBasedComponents />*/}
-      <ErrorHandling />
+      <ClassBasedComponents />
+      <ErrorHandling />*/}
     </>
   );
 }
