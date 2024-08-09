@@ -133,3 +133,6 @@ For performance reasons, the Profiler is ignored in production mode.
 
 React DevTools
 An official React browser extension for debugging React.
+
+DRY Component
+Short for don't repeat your code, a principle involving refactoring any repeated code into helper functions. In React, we follow DRY principles by moving shared interfaces into helper components and common hook logic into custom hooks.
