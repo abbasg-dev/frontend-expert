@@ -12,7 +12,7 @@
 // import Portals from "./components/Portals";
 // import ClassBasedComponents from "./components/ClassBasedComponents";
 // import ErrorHandling from "./components/ErrorHandling";
-// import Debugging from "./components/Debugging";
+import Debugging from "./components/Debugging";
 
 export default function App() {
   return (
@@ -30,8 +30,8 @@ export default function App() {
       <CustomHooks />
       <Portals />
       <ClassBasedComponents />
-      <ErrorHandling />
-      <Debugging />*/}
+      <ErrorHandling />*/}
+      <Debugging />
     </>
   );
 }

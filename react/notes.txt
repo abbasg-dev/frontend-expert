@@ -147,3 +147,26 @@ A "virtual" representation of the DOM kept by React internally. Since this data 
 
 Reconciliation
 The algorithm used by React to determine the "diff" between two trees of React elements. After each state update, React runs the reconciliation algorithm to determine what has changed, and that changelog is sent to the rendering function (in the case of the browser, this is from React DOM) which can update the page using the information.
+
+Companion Libraries
+
+Redux
+A JavaScript state-management library often used with React. Redux uses reducer functions to create a global store that any component can read from.
+
+Recoil
+A JavaScript state-management library built for React. Recoil uses atoms, which are global pieces of state that any component can subscribe to.
+
+Server-Side Rendering
+A method of rendering an application where the server generates the final HTML page, rather than giving the client an empty HTML file and the scripts needed to generate the page. Server-side rendering can create significant performance improvements while also helping with search-engine optimization.
+
+Static-Site Generation
+Similar to server-side rendering, a method of rendering an application where the server generates the final HTML pages, rather than giving the client an empty HTML file and the scripts needed to generate the page. The key distinction between static-site generation and server-side rendering is that static-site generation creates all possible HTML files at build time, whereas server-side rendering creates a new HTML file for each server request.
+
+Next.js
+A JavaScript framework built around React. The primary use case for Next.js is server-side rendering, but it also includes a wide variety of other tools to simplify development and improve performance.
+
+Gatsby
+A JavaScript framework with the primary use case of static-site generation. In addition to static-site generation, Gatsby also includes a wide variety of other features that simplify development and improve performance, similar to Next.js.
+
+React Router
+A React library for declaratively controlling page routing from the client-side.
