@@ -20,3 +20,13 @@ Oftentimes abbreviated as DNS, the process used for translating domain names to 
 
 Transmission Control Protocol
 Oftentimes abbreviated as TCP, a network protocol used to establish a connection between two computers on the internet. TCP is the primary mechanism by which HTTP requests are delivered.
+
+Hypertext Transfer Protocol
+Oftentimes abbreviated as HTTP, a common network protocol used for sending requests and responses on the web.
+
+HTTP requests generally have three components: the request line, headers and a body (although the body is optional for some request methods). The request line includes the method, path and HTTP version. Headers contain key value pairs of extra information for the server. The body contains the contents of the request, such as new data being uploaded in a post request.
+
+HTTP responses follow the same general format as requests, but in the top line (referred to as a status line), there is no method or path. Instead, this line contains a status code and message.
+
+HTTPS
+The HyperText Transfer Protocol Secure is an extension of HTTP that's used for secure communication online. It requires servers to have trusted certificates and uses the Transport Layer Security (TLS), a security protocol built on top of TCP, to encrypt data communicated between a client and a server.
