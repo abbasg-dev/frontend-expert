@@ -12,3 +12,11 @@ Note that a single machine or piece of software can be both a client and a serve
 
 Client—Server Model
 The paradigm by which modern systems are designed, which consists of clients requesting data or service from servers and servers providing data or service to clients.
+
+Webpage Request Lifecycle
+
+Domain Name System
+Oftentimes abbreviated as DNS, the process used for translating domain names to IP Addresses.
+
+Transmission Control Protocol
+Oftentimes abbreviated as TCP, a network protocol used to establish a connection between two computers on the internet. TCP is the primary mechanism by which HTTP requests are delivered.
