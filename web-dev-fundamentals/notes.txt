@@ -85,3 +85,12 @@ A standard for signed JSON tokens, oftentimes referred to by its abbreviation JW
 	A header with information about the encryption algorithm used.
 	The payload data.
 	The signature, which is created by the server using a secret key so that it can determine if it has been tampered with.
+
+Critical Rendering Path
+
+The process the browser takes to convert frontend files into a user interface. This process has five primary steps:
+	1. Parse the HTML and create a DOM tree.
+	2. Parse the CSS and create a CSS Object Model tree.
+	3. Combine the DOM tree and CSSOM tree into a render tree, containing information about the nodes that are going to be rendered to the page.
+	4. Calculate the layout (width, height and location) of nodes based on the viewport size.
+	5. Paint the screen using the render tree and layout calculations.
