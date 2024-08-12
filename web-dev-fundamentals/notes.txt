@@ -30,3 +30,32 @@ HTTP responses follow the same general format as requests, but in the top line (
 
 HTTPS
 The HyperText Transfer Protocol Secure is an extension of HTTP that's used for secure communication online. It requires servers to have trusted certificates and uses the Transport Layer Security (TLS), a security protocol built on top of TCP, to encrypt data communicated between a client and a server.
+
+Application Programming Interface
+Oftentimes referred to by the abbreviation API, the interface by which programs agree to communicate with each other.
+
+REST
+The Representational State Transfer API architectural style. An API using REST is usually referred to as a RESTful API and must follow these constraints:
+
+Client-server model: There must be a clear distinction between the client and the server, which can be developed independent of each other.
+Stateless: The server does not maintain session state, so the client must send all information required to complete a request with the request.
+Cacheable: The server should clearly define which responses can be cached by the client.
+Layered system: If a layered system is used, the client should not need to know which server it is connected to.
+Uniform interface: The interface should be consistent, following these rules:
+	Resource identification in requests: Requests should identify resources, but these resources can follow a different representation than that used on the backend.
+	Resource manipulation through representations: The client should have enough information about a requested resource to edit that resource.
+	Self-descriptive messages: Responses include messages describing how to manipulate the resource, usually as a MIME type.
+	Hypermedia as the engine of application state: Responses should include links to future request options.
+Code on demand (optional): Optionally, the server can send code to the client to be executed by the client.
+
+RPC
+The Remote Procedure Call API architectural style. In this style, the server provides an interface for the client to call certain functions on the server.
+
+SOAP
+The Simple Object Access Protocol used for APIs. This protocol provides a specific XML based format for clients and servers to communicate with.
+
+GraphQL
+A query language for querying APIs by describing the format of the requested data. GraphQL has major benefits in only sending necessary data on the network and potentially combining requests for multiple resources into a single request.
+
+API Key
+A unique key used to identify an application to an API. These keys are sent with each request and thus should be considered public information when working on a public application.
