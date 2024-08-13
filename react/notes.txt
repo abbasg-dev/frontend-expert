@@ -92,6 +92,8 @@ A React hook for using a context. The useContext function takes in a context obj
 Key Prop
 A prop passed to each element in a list to help React keep track of those elements. Key props should be unique identifiers. By passing key props, if the list changes, React can easily know which elements need to be mounted, updated, and unmounted.
 
+Performance
+
 useMemo
 A React hook for memoizing a value. The useMemo function takes in a function that returns a value to be memoized and a dependency array. The useMemo function then returns the memoized value, and it only calls the passed in function to recalculate the value if an item in the dependency array changes.
 
