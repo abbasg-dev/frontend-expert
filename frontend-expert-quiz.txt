@@ -1,0 +1,282 @@
+1. What is the difference between the div and section tags?
+Sections provide semantic meaning for thematically related content, while divs have no semantic meaning by default.
+
+2. What is the difference between the h1 and h2 tags?
+H1 represents a primary heading, while h2 is a less important subheading.
+
+3. Which of the following are benefits of image sprites?
+They minimize the number of image files the client needs to download.
+They can decrease total page load times.
+
+4. Consider the following code, what would be the output?
+
+function mystery() {
+  let num = 0;
+  return { getNum: () => num, increment: () => num++ };
+}
+const { getNum, increment } = mystery();
+const { getNum: getNum2, increment: increment2 } = mystery();
+increment();
+increment();
+increment2();
+console.log(getNum(), getNum2());
+
+2,1
+
+5. What will the following code evaluate to?
+
+[2, 1, 4, 3].sort((val1, val2) => {
+  return val2 - val1;
+});
+
+[4, 3, 2, 1]
+
+6. Given the following CSS, what would be the text color of a paragraph with the class "blue" and the id "red"?
+
+* { color: black; }
+
+.blue { color: blue; }
+
+#red { color: red; }
+
+p.blue { color: purple; }
+
+Red
+
+7. Which of the following could appear as fields in an accessibility tree node?
+State
+Description
+Name
+Role
+
+8. What will the following code output?
+
+function* generator() {
+  const value = yield 2;
+  yield value + 3;
+  yield value + 5;
+}
+const generatorObj = generator();
+console.log(generatorObj.next(3).value);
+console.log(generatorObj.next(5).value);
+console.log(generatorObj.next(7).value);
+
+2, 8, 10
+
+9. What would be the returned value of this code?
+element.offsetHeight - element.clientHeight;
+
+The combined height of any border and scrollbar.
+
+10. What is the purpose of an aria-label attribute?
+It provides an invisible label for the element, which increases accessibility for users such as those using a screen reader.
+
+11. What would the CSS selector article.mystery > section select?
+All section tags directly nested within an article of class mystery.
+
+12. Which of the following Array functions returns a new array?
+slice
+
+13. Consider the following code, what would be the order of console logs?
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 0); 
+}
+
+3, 3, 3
+
+14. Which of the following are benefits of the defer attribute of script tags?
+The script is loaded in the background rather than blocking the browser.
+The script will have access to a constructed DOM without having to wait for a load event.
+
+15. What are the three states of promises?
+pending, fulfilled, rejected
+
+16. Which of the following would be strictly equal to mysteryProto?
+class Mystery {}
+const mysteryProto = Object.getPrototypeOf(Mystery);
+
+Function.prototype
+
+17. What does the following code log?
+const obj = {
+  website: 'AlgoExpert',
+  logWebsite: () => console.log(this.website)
+};
+obj.logWebsite();
+
+Undefined
+
+18. From inside to outside, what is the order of the components to the box model?
+content, padding, border, margin
+
+19. What is returned by the fetch function?
+A Promise object
+
+20. What is the purpose of the [[Prototype]] property of objects?
+It contains a reference to the object that the object inherits from.
+
+21. Given the following CSS, what would be the width of the content of #mystery?
+
+#mystery {
+  box-sizing: border-box;
+  width: 100px;
+  border: 10px solid black;
+  padding: 5px;
+}
+
+70px
+
+22. Which of the following will result in a value of true?
+'abc' == 'abc'
+null == undefined
+
+23. What is meant by event bubbling?
+Events start at the lowest elements before triggering event handlers on their parents.
+
+24. Given the following code, what will be logged to the console?
+
+async function mystery() {
+  return 2;
+}
+console.log(mystery());
+
+A fulfilled Promise with a value of 2.
+
+25. What is the primary difference between an inline-block and an inline element?
+Inline-block elements can have their width and heights changed, while inline elements always have the width and height of their content.
+
+26. What data structure does the DOM use as the primary representation of the document?
+Tree
+
+27. What are the primary class types of BEM?
+Blocks, elements and modifiers
+
+28. Which of the following are properties of a flexbox item?
+flex-shrink
+flex-basis
+
+29. How many columns will a CSS grid with the following CSS have?
+display: grid;
+grid-template-columns: [start] auto repeat(3, 1fr) 30% [end];
+
+5
+
+30. What is the purpose of a CSS preprocessor?
+They add extra features to CSS making the code easier to read, write and maintain.
+
+31. The root <html> element has a font size of 16px. A <div> inside of the root has a font size of 1.5rem. A direct child of that div has a font size of 2em. What is the font size of the child in pixels?
+48px
+
+32. What will be the value of mysteryTwo given the code below?
+
+const arr = [2, 3, 4];
+const [mysteryOne, ...rest] = arr;
+const mysteryTwo = [...rest, ...arr, mysteryOne];
+
+[3, 4, 2, 3, 4, 2]
+
+33. What would the following code log?
+
+(function(num) {
+  (function(num) {
+    console.log(num * 2);
+  })(5);
+})(10);
+
+10
+
+34. What is the effect of this line of code?
+requestAnimationFrame(myFunction);
+
+It calls myFunction before the next repaint.
+
+35. What data structure does the event loop use to keep track of callbacks waiting to be executed?
+Queue
+
+36. What is the purpose of the array reduce function?
+It converts the array into a single value by running a callback function on each value of the array, passing the return value of each iteration as an argument to the next iteration.
+
+37. Which tag is required in every HTML file?
+<title>
+
+38. What is the order of logs of the following code?
+
+Promise.resolve(1)
+  .then(
+    (value) => console.log(value * 2),
+    (value) => console.log(value * 3)
+  )
+  .then(() => { throw new Error('Oh No!'); })
+  .catch((error) => 3)
+  .finally(() => console.log(4))
+  .then(console.log);
+console.log(7);
+
+7, 2, 4, 3
+
+39. What will the following code evaluate to?
+
+const mystery = {
+  num: 6,
+  x: {
+    z: 1,
+  },
+};
+console.log(mystery.num > 5 ? mystery?.x?.y ?? 2 : mystery.x.y);
+
+2
+
+40. What is the purpose of adding this meta tag to the head of an HTML file?
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+It prevents a default behavior where mobile phones zoom out the page. This allows for responsive CSS to work as intended.
+
+41. What is a JavaScript engine?
+A program that executes JavaScript code, typically in a browser.
+
+42. What is the difference between a pseudo-element and pseudo-class?
+A pseudo-element styles a specific part of an element, while a pseudo-class styles an element based on its current state.
+
+43. What is meant by a curried function?
+A function transformed to have its parameters treated as a sequence of function calls that each have a single parameter.
+
+44. Given the following code, what is the value of mystery?
+
+const mystery = new Array(3)
+  .fill(2)
+  .map((x, y) => x + y)
+  .filter(x => x % 2 === 0)
+  
+[2, 4]
+
+45. Consider the following stacking context hierarchy and z-indexes. What would be the order of the elements on the z-axis from bottom to top?
+
+root
+├── Container One: z-index: 1
+│   ├── Element A: z-index: 3
+│   └── Element B: z-index: 5
+└── Container Two: z-index: 2
+    ├── Element C: z-index: 6
+    └── Element D: z-index: 4
+	
+
+A, B, D, C
+
+46. Why is let generally preferred over var for declaring variables?
+let is block scoped, which is less bug prone than the function scoped var.
+
+47. If an element was set to position: relative with top: 10, where will the element be positioned?
+10px below where it would have been positioned naturally with position: static.
+
+48. What is the purpose of a CSS media query?
+To modify the page style based on the features of the user's device, such as screen sizes.
+
+49. Which of the following are effects of adding type=module to a <script> tag?
+Top level identifiers are only accessible within the script.
+The script will be able to use the import and export keywords.
+The script will be executed in strict mode.
+The script will be deferred, similar to adding a defer attribute.
+
+50. Which of the following would cause an entire JavaScript file to be executed in strict mode?
+Using the type="module" attribute on the <script> tag.
+Adding the string "use strict" to the top of the file.

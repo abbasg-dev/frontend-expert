@@ -1,0 +1,52 @@
+h1 {
+  text-align: center;
+}
+
+.answer {
+  cursor: pointer;
+  padding: 5px;
+  margin: 0;
+  border: 2px solid transparent;
+}
+
+.answer::before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  padding: 1px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 5px;
+  padding: 2px;
+}
+
+button:disabled,
+input[type="button"]:disabled {
+  background-color: grey;
+}
+
+button:first-of-type,
+input[type="button"]:first-of-type {
+  left: 16px;
+}
+
+button,
+input[type="button"] {
+  cursor: pointer;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #02203c;
+  color: white;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.incorrect {
+  border: 2px solid red;
+}
+
+.correct {
+  border: 2px solid green;
+}
