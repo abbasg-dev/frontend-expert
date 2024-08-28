@@ -4,7 +4,8 @@
 // import Quiz from "./components/Quiz/Quiz";
 // import Memory from "./components/Memory/Memory";
 // import CryptoPrices from "./components/CryptoPrices/CryptoPrices";
-import PhoneInput from "./components/PhoneInput/PhoneInput";
+// import PhoneInput from "./components/PhoneInput/PhoneInput";
+import ConnectFour from "./components/ConnectFour/ConnectFour";
 import "./App.css";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       {/* <Quiz /> */}
       {/* <Memory /> */}
       {/* <CryptoPrices /> */}
-      <PhoneInput />
+      {/* <PhoneInput /> */}
+      <ConnectFour />
     </>
   );
 }
