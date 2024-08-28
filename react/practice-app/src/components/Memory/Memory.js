@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Memory.css";
 
 const TILE_COLORS = ["red", "green", "blue", "yellow"];
 

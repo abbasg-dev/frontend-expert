@@ -22,3 +22,19 @@ h1 {
   height: 20px;
   background-color: white;
 }
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
