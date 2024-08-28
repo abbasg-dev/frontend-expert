@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./CryptoPrices.css";
 
 const CRYPTO_PRICES_API_BASE_URL =
   "https://api.frontendexpert.io/api/fe/cryptocurrencies";
