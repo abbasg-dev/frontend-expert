@@ -1,5 +1,3 @@
-import React from "react";
-
 function useLocalStorage(key, initialValue) {
   const [value, setValue] = useState(() => {
     const savedValue = JSON.parse(localStorage.getItem(key));
@@ -18,5 +16,4 @@ function useLocalStorage(key, initialValue) {
   return [value, setValueAndLocalStorage];
 }
 
-// Do not edit the line below.
 exports.useLocalStorage = useLocalStorage;
